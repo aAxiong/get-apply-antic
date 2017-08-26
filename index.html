@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="ajax.js"></script>
+<script type="text/javascript">
+
+$(function(){
+			fnAjax("admin/admin/role_list","get",{},function(msg){
+			 if(msg.status == 404 || msg.status == 0 ){ four = false;  }   
+			 var code = msg.code; 
+			},function(err_msg,status){
+				console.log(status);
+			})
+})
+</script>
+</body>
+</html>
